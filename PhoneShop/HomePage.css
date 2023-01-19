@@ -1,0 +1,157 @@
+body {
+  background-image: url("Images/PhoneShopImage.jpg");
+  background-position: center;
+  background-size: cover;
+}
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50%;
+  width: 10%;
+  height: 100%;
+  animation: color-animation 4s infinite;
+  padding: 1%;
+  
+}
+
+@keyframes color-animation {
+  0% {
+    color: red;
+  }
+  25% {
+    color: green;
+  }
+  50% {
+    color: blue;
+  }
+  75% {
+    color: yellow;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  width: 30%;
+  height: 30%;
+  overflow: auto;
+  background-color: white;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.modal-content {
+  margin: auto;
+  padding: 5px;
+  width: 60%;
+  border-radius: 10px;
+  position: relative;
+  background-color: #000033;
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+}
+
+.modal-content a {
+  color: aliceblue;
+}
+.modal-price{
+  margin: auto;
+  padding: 5px;
+  width: 20%;
+  border-radius: 10px;
+  position: relative;
+  background-color: #000033;
+  color: white;
+  position: absolute;
+  bottom: 40px;
+  right: 0px;
+}
+.modal-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-dots .dot {
+  font-size: 25px;
+  color: lightgray;
+  display: inline-block;
+  position: relative;
+  margin: 0 5px; /* add this */
+}
+
+.modal-dots .dot:before {
+  content: attr(data-dot);
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  font-size: 10px;
+  color: white;
+  background-color: gray;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.modal-dots .dot.active {
+  color: black;
+}
+
+.modal-dots .dot.active:before {
+  background-color: black;
+}
+
+
+
+#navbar {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+}
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: right;
+  margin-right: 10px;
+  text-align: left;
+  margin-left: 10px;
+  
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 10%;
+}
+
+#navbar a img {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+
+

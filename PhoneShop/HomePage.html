@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="HomePage.css" />
+
+    <title>PhoneShop</title>
+  </head>
+  <body>
+    <h1>PhoneShop</h1>
+    <div class="modal">
+      <span class="modal-dots">
+        <span class="dot" data-dot="1">&#9679;</span>
+        <span class="dot" data-dot="2">&#9679;</span>
+        <span class="dot" data-dot="3">&#9679;</span>
+      </span>
+
+      <div class="modal-content"></div>
+      <p class="modal-price"></p>
+    </div>
+
+    <div id="navbar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#"
+        ><img src="Images/shopping-cart-icon.png" alt="Shopping cart icon"
+      /></a>
+    </div>
+    <script>
+      function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        if (navbar.className === "topnav") {
+          navbar.className += " responsive";
+        } else {
+          navbar.className = "topnav";
+        }
+      }
+
+      let modalContent = document.querySelector(".modal-content");
+      let modalPrice = document.querySelector(".modal-price");
+      let contentIndex = 0;
+      var contents = [
+        {
+          image: "Images/samsung-galaxy.jpeg",
+          content: "Samsung Galaxy",
+          price: "2000,-",
+          pageForItem: "ItemPage/Samsung.html",
+        },
+        {
+          image: "Images/iphone14.png",
+          content: "iPhone",
+          price: "3000,-",
+          pageForItem: "ItemPage/Iphone.html",
+        },
+        {
+          image: "Images/airpods.png",
+          content: "airpods",
+          price: "1800,-",
+          pageForItem: "ItemPage/airpods.html",
+        },
+      ];
+
+      setInterval(function () {
+        // Clear active class from all dots
+        document
+          .querySelectorAll(".dot")
+          .forEach((dot) => dot.classList.remove("active"));
+
+        modalPrice.innerHTML = contents[contentIndex].price;
+
+        modalContent.innerHTML = `<a href=${contents[contentIndex].pageForItem}>${contents[contentIndex].content}</a>`;
+        document.querySelector(
+          ".modal"
+        ).style.backgroundImage = `url(${contents[contentIndex].image})`;
+
+        // Add active class to current dot
+        document
+          .querySelector(`.dot[data-dot="${contentIndex + 1}"]`)
+          .classList.add("active");
+
+        contentIndex = (contentIndex + 1) % contents.length;
+      }, 3000);
+    </script>
+  </body>
+</html>
