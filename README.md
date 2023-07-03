@@ -22,13 +22,6 @@ Installation
 cd PhoneShop
 </code></pre>
 
-Contributing
-Contributions are welcome! If you encounter any issues or have suggestions for improvement, feel free to create a pull request or submit an issue on the GitHub repository.
-
-When contributing to this project, please follow the existing coding style and commit guidelines. Be sure to thoroughly test your changes before submitting a pull request.
-
-License
-PhoneShop is open-source software licensed under the MIT License.
 
 Acknowledgments
 This project was inspired by the need for a simple and user-friendly platform to buy and sell mobile phones.
