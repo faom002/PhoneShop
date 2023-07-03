@@ -14,8 +14,13 @@ Order History: After completing a purchase, users can view their order history, 
 
 Installation
 
-git clone https://github.com/faom002/PhoneShop.git
+<ol>
+  <li>Clone the repository:</li>
+</ol>
+
+<pre><code>git clone https://github.com/faom002/PhoneShop.git
 cd PhoneShop
+</code></pre>
 
 Contributing
 Contributions are welcome! If you encounter any issues or have suggestions for improvement, feel free to create a pull request or submit an issue on the GitHub repository.
